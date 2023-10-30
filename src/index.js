@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import 'react-vant/es/styles';
+import { Home } from './route/homePage';
 import reportWebVitals from './reportWebVitals';
+import { ConfigProvider } from 'react-vant';
+import './index.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <ConfigProvider>
+    <React.StrictMode>
+      <Home/>
+    </React.StrictMode>
+  </ConfigProvider>,
 );
 
 // If you want to start measuring performance in your app, pass a function
